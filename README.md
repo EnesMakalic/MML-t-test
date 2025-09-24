@@ -8,30 +8,30 @@ This repository contains a MATLAB implementation of the **Minimum Message Length
 
 The code implements a statistical test for discriminating between two groups based on a numerical target/outcome variable. The observed data are two independent samples:
 
-- $$ y_1 \sim \mathcal{N}(\mu_1, \sigma_1^2), \quad y_1 \in \mathbb{R}^{n_1 \times 1} $$
-- $$ y_2 \sim \mathcal{N}(\mu_2, \sigma_2^2), \quad y_2 \in \mathbb{R}^{n_2 \times 1} $$
+- y_1 ~ N(mu_1, sigma_1^2),   y_1 is a vector of length n_1
+- y_2 ~ N(mu_2, sigma_2^2),   y_2 is a vector of length n_2
 
 
 We consider four competing models:
 
 1. **Model 1:** Common mean, common standard deviation  
-   $$ \mu_1 = \mu_2, \quad \sigma_1 = \sigma_2 $$
+   $$ mu_1 = mu_2, sigma_1 = sigma_2 
 2. **Model 2:** Common mean, different standard deviations  
-   $$ \mu_1 = \mu_2, \quad \sigma_1 \neq \sigma_2 $$
+   $$ mu_1 = mu_2, sigma_1 \neq sigma_2 
 3. **Model 3:** Different means, common standard deviation  
-   $$ \mu_1 \neq \mu_2, \quad \sigma_1 = \sigma_2 $$
+   $$ mu_1 \neq mu_2, sigma_1 = sigma_2 
 4. **Model 4:** Different means, different standard deviations  
-   $$ \mu_1 \neq \mu_2, \quad \sigma_1 \neq \sigma_2 $$
+   $$ mu_1 \neq mu_2, sigma_1 \neq sigma_2 
 
 
-MML requires prior distributions on all parameters:
+MML requires prior distributions on all parameters. We use:
 
 - **Grand mean**:  
-  $$ \mu \sim \text{Uniform (location-invariant)} $$
+  mu ~ Uniform (location-invariant)
 - **Standard deviations**:  
-  $$ \sigma \sim \text{Half-Cauchy}(0, 1) $$
+  sigma ~ Half-Cauchy(0, 1) 
 - **Effect size**:  
-  $$ \delta \sim \text{Cauchy}(0, 1) $$
+  delta ~ Cauchy}(0, 1)
 
 
 The function returns:
