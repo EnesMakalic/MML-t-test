@@ -1,6 +1,6 @@
 %% MML_CONST    Computes the WF87 quantisation constant.
 % 
-% Computes (k/2) (log(kappa_k) + 1), where kappa_k is the mean squared
+% Function returns (k/2) (log(kappa_k) + 1), where kappa_k is the mean squared
 % quantisation error of an optimal quantising lattice in k
 % dimensions.
 % 
@@ -19,6 +19,9 @@
 %
 % (c) Copyright Enes Makalic and Daniel F. Schmidt, 2019-
 function f = mml_const(k)
+arguments
+        k (1,1) double {mustBeInteger,mustBePositive}
+end
 
 % MSE
 kappa_k = [1 / 12               % k = 1 [Z lattice]
