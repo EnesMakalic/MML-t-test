@@ -15,13 +15,13 @@ The code implements a statistical test for discriminating between two groups bas
 We consider four competing models:
 
 1. **Model 1:** Common mean, common standard deviation  
-   $$ mu_1 = mu_2, sigma_1 = sigma_2 
+   mu_1 = mu_2, sigma_1 = sigma_2 
 2. **Model 2:** Common mean, different standard deviations  
-   $$ mu_1 = mu_2, sigma_1 \neq sigma_2 
+   mu_1 = mu_2, sigma_1 \neq sigma_2 
 3. **Model 3:** Different means, common standard deviation  
-   $$ mu_1 \neq mu_2, sigma_1 = sigma_2 
+   mu_1 \neq mu_2, sigma_1 = sigma_2 
 4. **Model 4:** Different means, different standard deviations  
-   $$ mu_1 \neq mu_2, sigma_1 \neq sigma_2 
+   mu_1 \neq mu_2, sigma_1 \neq sigma_2 
 
 
 MML requires prior distributions on all parameters. We use:
